@@ -68,12 +68,12 @@ if __name__ == '__main__':
 
     # Create a Car object
     car = Car('Honda', 'Civic', 4)
-    print(f'''Make: {car.make}, Model: {car.model},
-            Number of Doors: {car.number_of_doors}''')
+    print(f'Make: {car.make}, Model: {car.model}, '
+          f'Number of Doors: {car.number_of_doors}')
     print(car)
 
     # Create a Truck object
     truck = Truck('Ford', 'F-150', '1000 lbs')
-    print(f'''Make: {truck.make}, Model: {truck.model},
-            Cargo Capacity: {truck.cargo_capacity}''')
+    print(f'Make: {truck.make}, Model: {truck.model}, '
+          f'Cargo Capacity: {truck.cargo_capacity}')
     print(truck)
