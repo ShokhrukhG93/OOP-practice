@@ -72,11 +72,11 @@ class Truck(Vehicle):
         return f'{self.make} {self.model} has {self.cargo_capacity} cargo capacity.'
 
 
-class ElectricCar(Vehicle):
-    """Represents an electic car."""
+class ElectricCar(Car):
+    """Represents an electric car."""
     
     def fuel_type(self) -> str:
-        """Return the fuek type of the electric car."""
+        """Return the fuel type of the electric car."""
         return 'Electric'
 
 
@@ -101,7 +101,7 @@ if __name__ == '__main__':
     print(truck.fuel_type())
 
     # Create an Electriccar object
-    eletriccar = ElectricCar('Tesla', 'Model Y')
-    print(f'Make: {eletriccar.make}, Model: {eletriccar.model}')
-    print(eletriccar)
-    print(eletriccar.fuel_type())
+    eletric_car = ElectricCar('Tesla', 'Model Y', 4)
+    print(f'Make: {eletric_car.make}, Model: {eletric_car.model}')
+    print(eletric_car)
+    print(eletric_car.fuel_type())
