@@ -16,6 +16,9 @@ class Car(Vehicle):
     def __init__(self, make, model, number_of_doors):
         super().__init__(make, model)
         self.number_of_doors = number_of_doors
+    
+    def __repr__(self):
+        return f'{self.make} {self.model} has {self.number_of_doors} doors.'
 
 
 # Define the Truck SubClass of Vehicle class
@@ -23,6 +26,9 @@ class Truck(Vehicle):
     def __init__(self, make, model, cargo_capacity):
         super().__init__(make, model)
         self.cargo_capacity = cargo_capacity
+
+    def __repr__(self):
+        return f'{self.make} {self.model} has {self.cargo_capacity} cargo capacity.'
 
 
 if __name__ == '__main__':
