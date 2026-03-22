@@ -11,18 +11,30 @@ class Vehicle:
         self.make = make
         self.model = model
 
-    def start(self) -> None:
-        """Print a message indicating the vehicle is starting."""
-        print(f'{self.make} {self.model} is starting.')
-    
     def __repr__(self) -> str:
         """Return a string representation of the Vehicle object."""
-        return f'This vehicle is {self.make} {self.model}'
+        return f'The manufacture: {self.make}, the model: {self.model}.'
 
+    def start(self) -> None:
+        """Print a message indicating the vehicle is starting."""
+        print(f'The {self.make} {self.model} is starting.')
     
+    def stop(self) -> None:
+        """Print a message indicating the vehicle is stopping."""
+        print(f'The {self.make} {self.model} is stopping.')
+
+    def drive(self) -> None:
+        """Print a message indicating the vehicle is driving."""
+        print(f'The {self.make} {self.model} is driving.')
+
+    def fuel_type(self) -> str:
+        """Return the string representation of fuel type"""
+        return 'Gasoline'
+
+
 # Define the Car SubClass of Vehicle class
 class Car(Vehicle):
-    """Represents a car with basic attributes and actions."""
+    """Represents a car."""
     def __init__(self, make: str, model: str, number_of_doors: int) -> None:
         """
         Initialize a car object.
@@ -42,7 +54,7 @@ class Car(Vehicle):
 
 # Define the Truck SubClass of Vehicle class
 class Truck(Vehicle):
-    """Represents a truck with basic attributes and actions."""
+    """Represents a truck."""
     def __init__(self, make: str, model: str, cargo_capacity: str) -> None:
         """
         Initialize a Truck object.
@@ -60,6 +72,14 @@ class Truck(Vehicle):
         return f'{self.make} {self.model} has {self.cargo_capacity} cargo capacity.'
 
 
+class ElectricCar(Vehicle):
+    """Represents an electic car."""
+    
+    def fuel_type(self) -> str:
+        """Return the fuek type of the electric car."""
+        return 'Electric'
+
+
 if __name__ == '__main__':
     # Create a Vehicle object
     vehicle = Vehicle('Generic Make', 'Generic Model')
@@ -71,9 +91,17 @@ if __name__ == '__main__':
     print(f'Make: {car.make}, Model: {car.model}, '
           f'Number of Doors: {car.number_of_doors}')
     print(car)
+    print(car.fuel_type())
 
     # Create a Truck object
     truck = Truck('Ford', 'F-150', '1000 lbs')
     print(f'Make: {truck.make}, Model: {truck.model}, '
           f'Cargo Capacity: {truck.cargo_capacity}')
     print(truck)
+    print(truck.fuel_type())
+
+    # Create an Electriccar object
+    eletriccar = ElectricCar('Tesla', 'Model Y')
+    print(f'Make: {eletriccar.make}, Model: {eletriccar.model}')
+    print(eletriccar)
+    print(eletriccar.fuel_type())
