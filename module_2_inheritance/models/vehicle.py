@@ -1,5 +1,5 @@
 class Vehicle:
-    """Represetnts a vehicle with basic attributes and actions."""
+    """Represents a vehicle with basic attributes and actions."""
     def __init__(self, make: str, model:str) -> None:
         """
         Initialize a vehicle object.
@@ -22,7 +22,7 @@ class Vehicle:
     
 # Define the Car SubClass of Vehicle class
 class Car(Vehicle):
-    """Represetnts a car with basic attributes and actions."""
+    """Represents a car with basic attributes and actions."""
     def __init__(self, make: str, model: str, number_of_doors: int) -> None:
         """
         Initialize a car object.
@@ -35,27 +35,27 @@ class Car(Vehicle):
         super().__init__(make, model)
         self.number_of_doors = number_of_doors
     
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Return a string representation of the Car object."""
         return f'{self.make} {self.model} has {self.number_of_doors} doors.'
 
 
 # Define the Truck SubClass of Vehicle class
 class Truck(Vehicle):
-    """Represetnts a truck with basic attributes and actions."""
-    def __init__(self, make: str, model: str, cargo_capacity: float) -> None:
+    """Represents a truck with basic attributes and actions."""
+    def __init__(self, make: str, model: str, cargo_capacity: str) -> None:
         """
         Initialize a Truck object.
 
         Args:
             make (str): The manufacturer of the Truck (e.g., 'Toyota').
             model (str): The model of the Truck (e.g., 'Corolla').
-            cargo_capacity (float): The cargo capacity of the Truck (e.g., 100)
+            cargo_capacity (str): The cargo capacity of the Truck (e.g., 1000 lbs)
         """
         super().__init__(make, model)
         self.cargo_capacity = cargo_capacity
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Return a string representation of the Truck object."""
         return f'{self.make} {self.model} has {self.cargo_capacity} cargo capacity.'
 
