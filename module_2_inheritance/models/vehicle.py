@@ -105,3 +105,5 @@ if __name__ == '__main__':
     print(f'Make: {eletric_car.make}, Model: {eletric_car.model}')
     print(eletric_car)
     print(eletric_car.fuel_type())
+
+    print(ElectricCar.__mro__)
